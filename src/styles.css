@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("../node_modules/bootstrap/dist/css/bootstrap.min.css");   
+
+body{
+    background-color: #f2f2f2 !important;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+    font-size: 81.25%;
+}
+
+.header-section{
+    max-width: 98%;
+    margin: 10px auto;
+}
+
+mat-chip-list .mat-chip-list-wrapper{
+    display: inline-block;
+    flex-direction: initial;
+    margin:10px;
+    background-color: #dfd5c9;
+    position: relative;
+    width: 100px;
+    -webkit-animation: myfirst 1s 1; 
+    -webkit-animation-direction: alternate;
+    animation: myfirst 1s 1;
+    animation-direction: alternate;
+}
+
+@-webkit-keyframes myfirst {
+    0%   {background: #dfd5c9; left: 0px; top: 0px;}
+    25%  {background: grey; left: 50px; top: 0px;}
+    100% {background: #dfd5c9; left: 0px; top: 0px;}
+  }
+  
+  @keyframes myfirst {
+    0%   {background: #dfd5c9; left: 0px; top: 0px;}
+    25%  {background: grey; left: 50px; top: 0px;}
+    100% {background: #dfd5c9; left: 0px; top: 0px;}
+  }
+
+.mat-chip-list-wrapper .mat-chip:not(.mat-basic-chip){
+    transition: none;
+    border-radius:4px;
+}
+
+.mat-chip i{
+    background-color: #a99f91;
+    /* text-align: right; */
+    position: absolute;
+    right: 0;
+    padding: 10px 2px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    cursor: pointer;
+}
+
+tfoot .ngx-pagination .current{
+    background: #b7b7b7;
+}
+pagination-controls{
+    text-align: center;
+}

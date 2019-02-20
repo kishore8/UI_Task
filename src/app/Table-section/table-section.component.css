@@ -1,0 +1,40 @@
+.ui-table{
+    width: 100%;
+    
+}
+
+thead,tbody {
+    text-align: left;
+}
+
+table{
+    background-color: #fff;
+    border: 1px solid #f2f2f2;
+    border-radius: 10px;
+    margin: 0 auto; 
+}
+
+thead, tfoot{
+    background: #e8e5e0;
+}
+tr:nth-child(even) {background-color: #fafafa;} 
+tr,td{
+    border: 0;
+}
+
+.name-icon{
+    margin-right: 5px;
+}
+.age-filter{
+    color: #b2afaf;
+}
+.sort{
+    cursor: pointer;
+}
+
+
+button.btn{
+    background-color: #b7b7b7;
+    color: white;
+    padding: 2px 20px;
+}

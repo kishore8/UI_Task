@@ -1,0 +1,34 @@
+<table class="table ui-table">
+
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col" (click)="sortData('asc')" *ngIf="!sortReverse"><i class="fa fa-filter age-filter" aria-hidden="true"></i>Age<i
+          class="fa fa-fw fa-sort-up sort"></i></th>
+      <th scope="col" (click)="sortData('desc')" *ngIf="sortReverse"><i class="fa fa-filter age-filter" aria-hidden="true"></i>Age
+        <i class="fa fa-fw fa-sort-down sort"></i></th>
+
+
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of tableData | paginate: { itemsPerPage: 5, currentPage: p }; let i = index">
+      <td>{{employee.id}}</td>
+      <td><i class="fa fa-user name-icon"></i>{{employee.name}}</td>
+      <td>{{employee.desc}}</td>
+      <td>{{employee.age}}</td>
+      <td><button class="btn">Edit</button></td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="5">
+        <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </td>
+    </tr>
+  </tfoot>
+</table>

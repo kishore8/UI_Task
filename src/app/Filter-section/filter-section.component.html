@@ -1,0 +1,31 @@
+<div class="container-fluid header-section">
+  <h6>Citizen Age</h6>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="row header-styles text-center">
+
+        <div class="col-md-3" [ngClass]="{'applyFilter': isbelowTwentyClicked}" (click)="isFilterClicked($event, '20')">
+          <h5>{{count && count.belowTwenty}}</h5>
+          <span>below 20Yrs</span>
+        </div>
+
+        <div class="col-md-3" [ngClass]="{'applyFilter': isTwentyToFourtyClicked}" (click)="isFilterClicked($event, '20-40')">
+          <h5>{{count && count.twentyToFourty}}</h5>
+          <span>20 to 40Yrs</span>
+        </div>
+
+        <div class="col-md-3" [ngClass]="{'applyFilter': isFourtyToSixtyClicked}" (click)="isFilterClicked($event, '40-60')">
+          <h5>{{count && count.fourtyToSixty}}</h5>
+          <span>40 to 60Yrs</span>
+        </div>
+
+        <div class="col-md-3" [ngClass]="{'applyFilter': isaboveSixtyClicked}" (click)="isFilterClicked($event, '60')">
+          <h5>{{count && count.aboveSixty}}</h5>
+          <span>above 60Yrs</span>
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+</div>

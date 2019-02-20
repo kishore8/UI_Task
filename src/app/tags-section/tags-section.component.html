@@ -1,0 +1,3 @@
+<mat-chip-list *ngFor="let chip of selectedTagData; let i = index" #chipList>
+  <mat-chip>{{chipDisplayValue(chip)}} <i class="fa fa-times" (click)="removeChip(i,chip)"></i></mat-chip>
+</mat-chip-list>
